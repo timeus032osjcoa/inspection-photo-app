@@ -1,0 +1,94 @@
+{
+  "project_name": "請改成你的工程名稱",
+  "report_title": "施工現場自主檢查照片",
+  "contractor": "請改成廠商名稱",
+  "_說明": "以下是分類清單範例，你可以自己新增/刪除/改名，程式會自動套用。每個分類底下的 captions 是「常用照片說明」的建議清單，可以是純文字，也可以是模板物件（template 內的 {material}/{type}/{value} 會由 app.py 依情況自動代換），選取分類後可以直接點選，也可以自己打新的說明文字。詳細寫法請看 說明.txt 裡的「想新增/修改分類或常用說明文字」那段。",
+  "categories": [
+    {
+      "name": "刨除施工照片",
+      "captions": [
+        "AC刨除作業",
+        "挖土機刨除",
+        "掃車清潔",
+        "空壓機清理",
+        {"template": "AC刨除厚度{value}cm", "fill_in": true, "label": "AC刨除厚度"},
+        "小刨除機刨除"
+      ]
+    },
+    {
+      "name": "鋪築施工照片01",
+      "display_name": "鋪築施工照片",
+      "material_options": ["DGAC", "OGAC", "PAC"],
+      "captions": [
+        "黏層灑佈試驗",
+        "黏層溫度量測",
+        {"template": "瀝青混凝土({material})出廠溫度量測", "material": true},
+        {"template": "瀝青混凝土({material})鋪築溫度量測", "material": true},
+        {"template": "瀝青混凝土({material})鋪設", "material": true},
+        {"template": "瀝青混凝土({material})取樣", "material": true}
+      ]
+    },
+    {
+      "name": "鋪築施工照片02",
+      "display_name": "鋪築施工照片",
+      "material_options": ["DGAC", "OGAC", "PAC"],
+      "captions": [
+        {"template": "瀝青混凝土({material})滾壓溫度量測(初壓)", "material": true},
+        {"template": "瀝青混凝土({material})滾壓溫度量測(續壓)", "material": true},
+        {"template": "瀝青混凝土({material})滾壓溫度量測(終壓)", "material": true},
+        "平整度查驗",
+        "透水試驗",
+        "通車溫度"
+      ]
+    },
+    {
+      "name": "標線標記照片",
+      "type_options": ["熱聚酯標線", "臨時標線"],
+      "captions": [
+        {"template": "{type}繪製", "type": true},
+        {"template": "標線寬度{value}cm", "fill_in": true, "label": "標線寬度"},
+        {"template": "熱聚酯標線溫度", "only_type": "熱聚酯標線"},
+        {"template": "標線長度{value}cm", "fill_in": true, "label": "標線長度"},
+        "標記鑽孔",
+        "填充瀝青膠",
+        "標記黏貼",
+        {"template": "標記距標線{value}cm", "fill_in": true, "label": "標記距標線"}
+      ]
+    },
+    {
+      "name": "職安照片",
+      "captions": [
+        "急救箱及滅火器",
+        "滅火器壓力",
+        "施工前危害告知",
+        "工地現場施工前危害告知",
+        "施工人員著工程帽及反光背心",
+        "緩撞設施或交維"
+      ]
+    },
+    {
+      "name": "交維照片",
+      "min_required": 6,
+      "captions": [
+        "拒馬",
+        "燈箱",
+        "交通錐",
+        "電動旗手",
+        "車輛停等區",
+        "標誌車",
+        "交通桶",
+        "專人指揮"
+      ]
+    },
+    {
+      "name": "環境保護照片",
+      "captions": [
+        "刨除人員配戴口罩",
+        "帆布覆蓋",
+        "垃圾集中處",
+        "完成後工區清潔",
+        "出廠前清潔"
+      ]
+    }
+  ]
+}

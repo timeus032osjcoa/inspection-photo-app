@@ -1,0 +1,7 @@
+# 分類清單是手動排版的（captions 每個 template 物件都壓成一行），
+# 讓 Prettier 重排會把整個檔案拆開，diff 會爆掉。
+config.json
+packaging/config.範本.json
+
+# 打包產生的資料夾，不用格式化
+distribute/

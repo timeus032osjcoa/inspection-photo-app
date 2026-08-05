@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Build output (打包.bat regenerates distribute/ from scratch every run)
+distribute/
+工地照片系統.zip
+
+# Real site data — photos, manifests, reports
+incoming/
+staging/
+sorted/
+output/
+ignored/
+sites/
+.last_save_backup/
+manifest.csv
+session_pending.csv
+sites.json
+
+# Local machine settings
+.claude/settings.local.json
+.vscode/

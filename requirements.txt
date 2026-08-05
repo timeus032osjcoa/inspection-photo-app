@@ -1,0 +1,17 @@
+# 這裡的版本號一定要鎖死，不要改回沒有版本號的寫法。
+# 原因：安裝.bat 會在每一台新電腦上建立全新的 venv、重新 pip install 這個檔案，
+# 如果不鎖版本，同事三個月後安裝拿到的就是「那一天最新版」的套件，跟你這邊測試過的版本不一樣，
+# 出問題時你在自己電腦上完全重現不出來。
+# 特別是 streamlit 改版很頻繁：mobile_app.py 用到的 st.components.v2 要 1.59 以上才有，
+# 而 use_container_width 這個參數在更新的版本已經被標示為即將移除，兩邊夾起來能用的版本區間很窄。
+#
+# 要升級套件時請「刻意」照下面步驟做，不要順手改：
+#   1. 在你自己的電腦上改這個檔案的版本號，重新 pip install -r requirements.txt
+#   2. 完整跑過一次：辦公室版標記照片、手機版拍照、產生報告，確認都正常
+#   3. 確認沒問題之後，才把這份 requirements.txt 一起放進要發給同事的 zip
+
+streamlit==1.59.1
+python-docx==1.2.0
+pillow==12.3.0
+pillow-heif==1.4.0
+streamlit-cropper==0.3.1
